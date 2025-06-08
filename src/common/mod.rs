@@ -1,2 +1,4 @@
 pub mod log;
-pub mod err;
+pub mod error;
+pub mod text;
+pub mod flag;

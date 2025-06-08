@@ -17,4 +17,6 @@
               | "false"
 
 <scope>     = <ident>? "{" [<action> ";"]* "}"
-<action>    = <ident> "->" <value> ";"
+<action>    = <ident> "->" [<value> | <call>] ";"
+
+<call>      = <ident> "(" (<value> ",")* ")"
