@@ -1,0 +1,20 @@
+<root> = <directive>* <scope>+
+
+<directive> = "!" <ident> <value> ";"
+
+<ident>     = [_a-zA-Z][_a-zA-Z0-9]*
+
+<value>     =   <string>
+              | <integer>
+              | <float>
+              | <bool>
+
+<string>    = \" <char>* \"
+<char>      = [^"]
+<integer>   = "-"? [0-9]+
+<float>     = "-"? [0-9]+.[0-9]+
+<bool>      =   "true"
+              | "false"
+
+<scope>     = <ident>? "{" [<action> ";"]* "}"
+<action>    = <ident> "->" <value> ";"
